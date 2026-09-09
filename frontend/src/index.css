@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+/* Design tokens: one typeface (Manrope), a cool neutral canvas and a deep teal brand. */
+@theme {
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+
+  --color-canvas: #f4f6f8;
+  --color-ink: #182230;
+  --color-muted: #5b6b7c;
+  --color-line: #e3e8ee;
+
+  --color-brand-50: #e6f4f2;
+  --color-brand-100: #c9e7e2;
+  --color-brand-500: #14867c;
+  --color-brand-600: #0f766e;
+  --color-brand-700: #0b5d57;
+
+  --color-sidebar: #0f2e2b;
+  --color-sidebar-hover: #17423e;
+}
+
+html {
+  font-family: var(--font-sans);
+}
+
+body {
+  background-color: var(--color-canvas);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-brand-500);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
