@@ -1,103 +1,109 @@
 # Student Management System
 
-A full-stack web application for managing student records, courses, and related academic information through a clean and responsive dashboard.
+A full-stack web application for managing student records and courses through a clean, responsive admin dashboard.
 
-## 🚀 Features
+🔗 **Live Demo:** https://student-management-six-hazel.vercel.app
+
+---
+
+## Overview
+
+Student Management System is a full-stack application designed to simplify student and course management through a centralized admin panel.
+
+The application provides authentication, student CRUD operations, course management, and dashboard statistics. It uses a React frontend, Node.js/Express backend, and MongoDB database.
+
+---
+
+## Features
 
 ### Authentication
-- User registration and login
+- Admin registration
+- Admin login
 - JWT-based authentication
 - Protected application routes
-- Secure password hashing
+- Logout functionality
 
 ### Student Management
 - Add new students
 - View student records
-- Update student information
-- Delete student records
-- View detailed student information
-- Search and filter student records
-- Pagination for student listings
-- Student status management
+- Edit student information
+- Delete students
+- Track student status
+- View student statistics
 
 ### Course Management
-- Add courses
+- Create courses
 - View available courses
-- Update course information
+- Edit course information
 - Delete courses
-- Manage course-related student information
 
 ### Dashboard
-- Overview of student data
-- Student statistics
-- Active student count
-- Course statistics
-- Recent student information
-- Student status breakdown
+- Total students
+- Active students
+- Graduated students
+- Total courses
+- Recent students
+- Students grouped by status
 
-### UI & Experience
-- Responsive design
-- Mobile-friendly layout
-- Reusable UI components
-- Loading and error states
-- Confirmation dialogs
+### User Experience
+- Responsive dashboard interface
+- Clean navigation
 - Form validation
+- Loading and error states
+- Client-side routing
 
-## 🛠️ Tech Stack
+---
+
+## Tech Stack
 
 ### Frontend
+
 - React
 - TypeScript
 - Vite
-- CSS
+- Axios
+- React Router
 
 ### Backend
+
 - Node.js
 - Express.js
 - TypeScript
-- MongoDB
-- Mongoose
 - JWT Authentication
-- Zod Validation
-- bcrypt
+- Mongoose
 
-### Development Tools
-- Git
-- GitHub
-- npm
+### Database
 
-## 📁 Project Structure
+- MongoDB Atlas
+
+### Deployment
+
+- Vercel — Frontend
+- Render — Backend
+- MongoDB Atlas — Database
+
+---
+
+## Architecture
 
 ```text
-student-management-system/
-├── backend/
-│   ├── src/
-│   │   ├── config/
-│   │   ├── controllers/
-│   │   ├── middleware/
-│   │   ├── models/
-│   │   ├── routes/
-│   │   ├── services/
-│   │   ├── types/
-│   │   ├── utils/
-│   │   └── validators/
-│   ├── scripts/
-│   └── package.json
-│
-├── frontend/
-│   ├── src/
-│   │   ├── components/
-│   │   ├── context/
-│   │   ├── hooks/
-│   │   ├── layouts/
-│   │   ├── pages/
-│   │   ├── services/
-│   │   ├── types/
-│   │   └── utils/
-│   └── package.json
-│
-├── docs/
-│   └── screenshots/
-│
-├── .gitignore
-└── README.md
+┌─────────────────────────────┐
+│          Frontend           │
+│      React + TypeScript     │
+│          Vercel             │
+└──────────────┬──────────────┘
+               │
+               │ REST API
+               ▼
+┌─────────────────────────────┐
+│           Backend           │
+│    Node.js + Express.js     │
+│          Render             │
+└──────────────┬──────────────┘
+               │
+               │ Mongoose
+               ▼
+┌─────────────────────────────┐
+│          Database           │
+│        MongoDB Atlas        │
+└─────────────────────────────┘
